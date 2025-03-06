@@ -9,22 +9,27 @@
 </head>
 <body>
 
-<div class="row my-5">
-    <div class="col-sm-2">
-        <ul>
+<div class="d-flex">
+    <nav class="navbar overflow-y-auto position-fixed navbar-light bg-success flex-column vh-100 p-2">
+        <ul class="navbar-nav w-100 text-center">
+            <li class="nav-item">
+                <a class="nav-link fw-bold" href="{{ url_for('home') }}">Home</a>
+            </li>
             {% for key, value in label_dict.items() %}
-                {%  if key != "Timestamp" %}
-                <li><a href="{{ url_for(key) }}">{{ key }}</a></li>
-                {%  endif %}
+                {% if key != "Timestamp" %}
+                <li class="nav-item">
+                    <a class="nav-link text-capitalize" href="{{ url_for(key) }}">{{ key }}</a>
+                </li>
+                {% endif %}
             {% endfor %}
         </ul>
-    </div>
+    </nav>
 
-    <div class="col">
-      {% for message in get_flashed_messages() %}
-        <div class="flash">{{ message }}</div>
-      {% endfor %}
-      {% block body %}{% endblock %}
+    <div class="page p-4" style="margin-left: 125px">
+        {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+        {% block body %}{% endblock %}
     </div>
 </div>
 
