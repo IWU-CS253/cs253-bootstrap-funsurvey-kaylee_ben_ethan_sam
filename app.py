@@ -6,6 +6,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from dfprep import prepare_dataframe, get_data, renamelist
 
+# taken from https://stackoverflow.com/questions/69924881/userwarning-starting-a-matplotlib-gui-outside-of-the-main-thread-will-likely-fa
+# used to fix UserError: Starting a Matplotlib GUI outside of the main thread will likely fail.
+import matplotlib
+matplotlib.use('agg')
+
 local_data = True
 
 if local_data == False:
@@ -94,6 +99,10 @@ def textcount_html(df, col_label):
     # Process the series
     series = df[col_label].str.strip().str.lower().str.title()
     top_25 = series.value_counts().nlargest(25).sort_values(ascending=True)
+
+    # Setting up font
+    # plt.rcParams['font.family'] = 'sans-serif'
+    # plt.rcParams['font.sans-serif'] = ['Arial', 'DejaVu Sans']
 
     # Create the plot
     plt.figure(figsize=(10, 8))
