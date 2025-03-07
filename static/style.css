@@ -24,6 +24,10 @@
     padding-bottom: 10px;
 }
 
+.data {
+    padding-top: 10px;
+}
+
 /* Additional styling for visualization */
 ul {
     list-style-type: none;
