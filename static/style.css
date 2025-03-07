@@ -38,6 +38,10 @@ li {
     margin-bottom: 10px;
 }
 
+img {
+    border: thick solid #2e2e2e ;
+}
+
 .card {
     width: 250px;
     margin: 15px;

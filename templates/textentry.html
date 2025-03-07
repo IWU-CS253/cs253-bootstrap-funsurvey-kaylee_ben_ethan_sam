@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 {% block body %}
     <h1 class="title">{{ title }}</h1>
-    <h2 class="subtitle">Question</h2>
-    Question: {{ qtext }}
+{#    <h2 class="subtitle">Question</h2>#}
+    <b>Question</b>: {{ qtext }}
 
     <hr>
-    <div class = "chart">
+    <div class="chart">
     <h2 class="subtitle">Chart</h2>
     <img src="{{ chart }}" alt="Count Plot {{ title }}">
     </div>
