@@ -1,12 +1,43 @@
 {% extends "layout.html" %}
 {% block body %}
     <h1 class="title">{{ title }}</h1>
-    <b>Question</b>: {{ qtext }}
+    <h2 class="subtitle">Question</h2>
+    Question: {{ qtext }}
 
-    <hr>
-    <div class="chart">
+    <div class = "chart">
     <h2 class="subtitle">Chart</h2>
     <img src="{{ chart }}" alt="Count Plot {{ title }}">
     </div>
 
+    <div class = "data">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#dataModal">
+    Click to see all responses
+    </button>
+    <div class="modal" id="dataModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">All entries</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <div class="modal-body">
+                    <ul>
+                        {% for item in data %}
+
+                        <li>{{ item }}</li>
+
+                        {% endfor %}
+                    </ul>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 {% endblock %}

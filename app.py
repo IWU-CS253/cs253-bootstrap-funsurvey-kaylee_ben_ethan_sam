@@ -152,7 +152,8 @@ def musicartist():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/height')
@@ -161,7 +162,8 @@ def height():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/city')
@@ -170,7 +172,8 @@ def city():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/thirtymin')
@@ -179,7 +182,8 @@ def thirtymin():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/travel')
@@ -188,7 +192,8 @@ def travel():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/likepizza')
@@ -219,7 +224,8 @@ def sport():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/hangout')
@@ -228,7 +234,8 @@ def hangout():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/talk')
@@ -248,7 +255,8 @@ def year():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/quote')
@@ -257,7 +265,8 @@ def quote():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/areacode')
@@ -277,7 +286,8 @@ def pets():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/superpower')
@@ -286,7 +296,8 @@ def superpower():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
 
 
 @app.route('/shoes')
@@ -295,4 +306,5 @@ def shoes():
     return render_template('textentry.html',
                            title=col_label,
                            qtext=label_dict[col_label],
-                           chart='data:image/png;base64,' + textcount_html(df, col_label))
+                           chart='data:image/png;base64,' + textcount_html(df, col_label),
+                           data=df[col_label])
