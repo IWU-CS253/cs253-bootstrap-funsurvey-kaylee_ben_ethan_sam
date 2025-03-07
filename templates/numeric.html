@@ -1,19 +1,21 @@
 {% extends "layout.html" %}
 {% block body %}
     <h1 class="title">{{ title }}</h1>
-{#    <h2 class="subtitle">Question</h2>#}
     <b>Question</b>: {{ qtext }}
 
+    <hr>
     <div class = "descriptives">
     <h2 class="subtitle">Descriptives</h2>
         {{ descrip|safe }}
     </div>
 
+    <hr>
     <div class = "value counts">
     <h2 class="subtitle">Value Counts</h2>
         {{ value_counts|safe }}
     </div>
 
+    <hr>
     <div class = "chart">
     <h2 class="subtitle">Chart</h2>
     <img src="{{ chart }}" alt="Count Plot {{ title }}">
