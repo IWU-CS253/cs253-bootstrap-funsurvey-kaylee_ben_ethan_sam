@@ -1,5 +1,7 @@
 * {
     font-family: monospace, sans-serif;
+    color: #2e2e2e;
+    scrollbar-color: #fff7e8 #2e2e2e;
 }
 
 .container {
@@ -26,7 +28,7 @@ ul {
 li {
     border-radius: 10px;
     padding: 8px;
-    background-color: #f0f0f0;
+    /*background-color: #f0f0f0;*/
     margin-bottom: 4px;
 }
 
@@ -36,11 +38,30 @@ li {
     margin-bottom: 10px;
 }
 
+.card {
+    width: 250px;
+    margin: 15px;
+    box-shadow: #2e2e2e -8px 8px;
+}
+
 #nav_bg {
     background-color: #2e2e2e;
+}
+
+.nav-item {
+    background-color: #86c8cb;
+    margin: 5px;
 }
 
 #survey_btn {
     box-shadow: #2e2e2e -8px 8px;
     background-color: #86c8cb;
+    margin: 10px;
+    font-weight: bold;
+}
+
+#survey_btn:hover {
+    box-shadow: #86c8cb -8px 8px;
+    background-color: #2e2e2e;
+    color: #fff7e8;
 }
