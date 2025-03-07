@@ -4,9 +4,45 @@
     <h2 class="subtitle">Question</h2>
     Question: {{ qtext }}
 
-    <div class = "chart">
-    <h2 class="subtitle">Chart</h2>
+    <div>
     <img src="{{ chart }}" alt="Count Plot {{ title }}">
     </div>
+
+    <div>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#dataModal">
+    See all entries here
+    </button>
+
+    <div class="modal" id="dataModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">All entries</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <div class="modal-body">
+                    <ul>
+                    {% for item in data %}
+
+                        <li>{{ item }}</li>
+
+                    {% endfor %}
+                    </ul>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
 
 {% endblock %}

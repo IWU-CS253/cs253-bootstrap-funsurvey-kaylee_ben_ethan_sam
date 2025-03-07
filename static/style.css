@@ -13,6 +13,11 @@
     flex: 1; /* Takes up the remaining space */
 }
 
+.stats {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* Additional styling for visualization */
 ul {
     list-style-type: none;
