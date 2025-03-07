@@ -4,15 +4,15 @@
     <h2 class="subtitle">Question</h2>
     Question: {{ qtext }}
 
-    <div>
+    <div class = "chart">
+    <h2 class="subtitle">Chart</h2>
     <img src="{{ chart }}" alt="Count Plot {{ title }}">
     </div>
 
-    <div>
+    <div class = "data">
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#dataModal">
-    See all entries here
+    Click to see all responses
     </button>
-
     <div class="modal" id="dataModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -24,11 +24,11 @@
 
                 <div class="modal-body">
                     <ul>
-                    {% for item in data %}
+                        {% for item in data %}
 
                         <li>{{ item }}</li>
 
-                    {% endfor %}
+                        {% endfor %}
                     </ul>
                 </div>
 
@@ -40,9 +40,4 @@
         </div>
     </div>
     </div>
-
-
-
-
-
 {% endblock %}

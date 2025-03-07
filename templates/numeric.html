@@ -1,13 +1,18 @@
 {% extends "layout.html" %}
 {% block body %}
     <h1 class="title">{{ title }}</h1>
-    <h2 class="subtitle">Question</h2>
-    Question: {{ qtext }}
+    <b>Question</b>: {{ qtext }}
 
+    <hr>
     <div class = "stats">
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#descripModal">
     Descriptives
     </button>
+
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#countsModal">
+    Value Counts
+    </button>
+
     <div class="modal" id="descripModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -30,9 +35,6 @@
         </div>
     </div>
 
-    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#countsModal">
-    Value Counts
-    </button>
     <div class="modal" id="countsModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -56,6 +58,8 @@
     </div>
     </div>
 
+
+    <hr>
     <div class = "chart">
     <h2 class="subtitle">Chart</h2>
     <img src="{{ chart }}" alt="Count Plot {{ title }}">
