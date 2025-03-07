@@ -10,7 +10,7 @@
 <body>
 
 <div class="d-flex">
-    <nav class="navbar overflow-y-auto position-fixed navbar-light bg-success flex-column vh-100 p-2">
+    <nav id="nav_bg" class="navbar overflow-y-auto position-fixed navbar-light flex-column vh-100 p-2">
         <ul class="navbar-nav w-100 text-center">
             <li class="nav-item">
                 <a class="nav-link fw-bold" href="{{ url_for('home') }}">Home</a>
@@ -25,7 +25,7 @@
         </ul>
     </nav>
 
-    <div class="page p-4" style="margin-left: 125px">
+    <div class="page p-4" style="margin-left: 125px; background-color: #fff7e8">
         {% for message in get_flashed_messages() %}
             <div class="flash">{{ message }}</div>
         {% endfor %}

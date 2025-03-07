@@ -1,3 +1,7 @@
+* {
+    font-family: monospace, sans-serif;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -30,4 +34,13 @@ li {
     padding: 10px;
     background-color: #ffcccc;
     margin-bottom: 10px;
+}
+
+#nav_bg {
+    background-color: #2e2e2e;
+}
+
+#survey_btn {
+    box-shadow: #2e2e2e -8px 8px;
+    background-color: #86c8cb;
 }
